@@ -1,0 +1,34 @@
+#!/bin/bash
+
+
+echo "What is your name?"
+read name
+
+echo "--------------------------------------------------------------------------------------------------
+      |                                                                                                |
+      |My name is GIT BOT and i was created by AnthemPython AKA Godspower Maurice as he calls himself..|
+      |                                                                                                |
+      -------------------------------------------------------------------------------------------------|
+      "
+
+sleep 4
+echo "chmoding all the files in this directory, please wait for 3 seconds $name..."
+chmod +x *
+sleep 3
+
+git add --all
+echo "Enter your commit message"
+read commit
+git commit -m "$commit"
+git push
+sleep 3
+clear
+echo "I have pushed your files to both new and modified"
+sleep 3
+echo "But i need to status to know whether it got pushed or rejected"
+sleep 5
+clear
+git status
+sleep 4
+clear
+echo "Done $name"
