@@ -4,5 +4,5 @@
 
 
 class Square:
-    """Loop a square"""
+    """Define a square"""
     pass
