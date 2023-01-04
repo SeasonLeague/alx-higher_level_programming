@@ -1,22 +1,22 @@
 #!/usr/bin/python3
-'''Contains an add_integer function for a TDD project.
-'''
 
+"""Module for add_integer method."""
 
 def add_integer(a, b=98):
-    '''Computes the sum of two integers.
+    """Adds 2 integers.
     Args:
-        a (int): The first number.
-        b (int, optional): The second number.
-    Returns:
-        int: The sum of the two integers.
-    '''
-    if not isinstance(a, (int, float)):
-        raise TypeError('a must be an integer')
-    elif not isinstance(b, (int, float)):
-        raise TypeError('b must be an integer')
-    else:
-        return int(a) + int(b)
-if __name__ = "main":
-    import doctest 
-    doctest.testfile("test/0-add_integer.txt")
+        a: the first int.
+        b: second int, default 98.
+        Raises:
+            sum of the 2 integers.
+    """
+    if type(a) not in (int, float):
+        raise TypeError("a must be an integer")
+    if type(b) not in (int, float):
+        raise TypeError("b must be an integer")
+    return int(a) + int(b)
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testfile("tests/0-add_integer.txt")
