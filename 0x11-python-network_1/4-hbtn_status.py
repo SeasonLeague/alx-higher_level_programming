@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-'''
-    Fetch url and display ststus.
-'''
+""" Uses requests module to fetch URL status"""
 
-import requests as req
+import requests
 
-if __name__ == "__main__":
-    dat = req.get('https://intranet.hbtn.io/status')
-    print("Body response:")
-    print("\t- type: {}".format(type(dat.text)))
-    print("\t- content: {}".format(dat.text))
+if __name__ == '__main__':
+    response = requests.get('https://intranet.hbtn.io/status')
+    print("Body response:\n\t- type: {}\n\t- content: {}".format(type(response.text), response.text))
